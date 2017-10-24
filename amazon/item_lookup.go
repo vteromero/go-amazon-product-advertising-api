@@ -133,10 +133,10 @@ func (req *ItemLookupRequest) operation() string {
 func (req *ItemLookupRequest) Do() (*ItemLookupResponse, error) {
 	respObj := ItemLookupResponse{}
 	if _, err := req.Client.DoRequest(req, &respObj); err != nil {
-		return nil, err
+		return &respObj, err
 	}
 	if err := respObj.Error(); err != nil {
-		return nil, err
+		return &respObj, err
 	}
 	return &respObj, nil
 }
