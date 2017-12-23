@@ -107,6 +107,7 @@ type ItemAttributes struct {
 	AspectRatio       string
 	AudienceRating    string
 	Binding           string
+	Brand             string
 	Creator           Creator
 	EAN               string
 	EANList           EANList
